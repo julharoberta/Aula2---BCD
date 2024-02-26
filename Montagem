@@ -1,0 +1,11 @@
+CREATE TABLE categoria (
+    codigo INT
+         AUTO_INCREMENT
+         PRIMARY KEY,
+    nome VARCHAR(100)
+         NOT NULL,
+    categoria_pai INT,
+    CONSTRANT fk_categoria_categoria
+        FOREIGN KEY (categoria_pai)
+        REFERENCES categoria(codigo)
+);
